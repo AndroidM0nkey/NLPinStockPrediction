@@ -16,7 +16,7 @@ By Степанов Семён
 
 Овервью архитектуры выглядит так
 
-![alt text](https://github.com/AndroidM0nkey/NLPinStockPrediction/blob/main/architecture.jpg?raw=true)
+![alt text](https://github.com/AndroidM0nkey/NLPinStockPrediction/blob/main/architecture.png)
 
 ### Базовые датасеты
 
