@@ -4,6 +4,12 @@
 
 By Степанов Семён
 
+### (15.01.2024) Пример запроса к сервису
+
+```
+curl -X POST "http://158.160.28.16:8000/predict" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"US government approves bitcoin etf\"}"
+```
+
 ### Core задачи, которые хочется решить
 
 - Уметь отвечать при помощи API на вопрос: вырастет/упадет/не изменится стоимости акции для приложенной новости
