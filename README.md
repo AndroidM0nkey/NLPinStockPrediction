@@ -4,10 +4,21 @@
 
 By Степанов Семён
 
-### (15.01.2024) Пример запроса к сервису
+### (17.06.2024) Пример запроса к сервису
+
+Существует 3 ручки:
+
+- predict_dl (ml) -> возвращает ответ на одиночный запрос
+- predict_dl_batch (ml) -> возвращает ответы на множество запросов
+- dl_stats (ml) -> возвращает статистику по классам в текущей сессии
 
 ```
-curl -X POST "http://158.160.28.16:8000/predict" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"US government approves bitcoin etf\"}"
+curl -X 'POST'   'http://51.250.19.65:5051/predict_batch_dl/'\ -H 'Content-Type: application/json'\ -d '{"texts": ["Stock market crashed", "With the new production plant theAccording to the company updated strategy f
+or the years 2009-2012 , Basware targets a long-term net sales growth in the range of 20 % -40 % with an operating profit margin of 10 % -20 % of net sales"]}'
+```
+
+```
+curl -X 'GET' 'http://51.250.19.65:5051/stats_dl/'
 ```
 
 ### Core задачи, которые хочется решить
@@ -18,11 +29,6 @@ curl -X POST "http://158.160.28.16:8000/predict" -H  "accept: application/json" 
 
 - Уметь дообучать модель на батчах размеченных данных {Новость + Как повлияла на стоимости акции}
 
-- Реализовать сервис для дообучения. Некий realtime Scraper новостных сайтов + stock price для создания размеченных данных
-
-Овервью архитектуры выглядит так
-
-![alt text](https://github.com/AndroidM0nkey/NLPinStockPrediction/blob/main/architecture.png)
 
 ### Базовые датасеты
 
